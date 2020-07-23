@@ -1,0 +1,33 @@
+<h1 class="job-register-page-title">
+  知り合い情報登録
+</h1>
+
+<div class="job-register-form col-11 col-md-7">
+  <%= form_with model:@contact do |f| %>
+  <div>
+    <%= f.label :name,"名前", class:"label" %><br />
+    <%= f.text_field :name, autofocus: true, placeholder:"大前　春子", class:"job-input-form" %>
+  </div>
+
+
+  <div>
+    <%= f.label :birthday,"誕生日", class:"label" %><br />
+    <%= f.date_field :birthday, class:"job-input-form", value: Time.now.strftime("%Y-%m-%d")%>
+  </div>
+
+  <div>
+    <%= f.label :like,"好きなもの", class:"label" %><br />
+    <%= f.text_field :like, autofocus: true, placeholder:"甘いもの", class:"job-input-form" %>
+  </div>
+
+  <div>
+    <%= f.label :not_like,"苦手なもの", class:"label" %><br />
+    <%= f.text_field :not_like, autofocus: true, placeholder:"辛いもの", class:"job-input-form" %>
+  </div>
+
+
+  <div class="actions mt-5">
+    <%= f.submit "登録する",class:"submit-button" %>
+  </div>
+<% end %>
+</div>
