@@ -10,10 +10,28 @@
  * files in this directory. Styles in this file should be added after the last require_* statement.
  * It is generally better to create a new file per style scope.
  *
- *= require_self
  *= require_tree .
+ *= require_self
  */
 
 @import "bootstrap";
 @import "./variables";
+
+@mixin input-style($backgroundColor){
+    border-radius:50px;
+    width:100%;
+    border:none;
+    padding:0 15px;
+    height: 2.5em;
+    background-color:$backgroundColor;
+    &:focus {
+  outline: none;
+}
+}
+
+.submit-button{
+    @include input-style($mainColor);
+    color: $whiteColor;
+    cursor: pointer;
+  }
 

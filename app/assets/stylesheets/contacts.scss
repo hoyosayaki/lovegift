@@ -1,3 +1,56 @@
 // Place all the styles related to the Contacts controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: https://sass-lang.com/
+
+@import "./variables";
+
+.contact-register-page-title{
+    text-align:center;
+    color: $mainColor;
+    margin:5px 0;
+}
+.contact-register-form{
+    margin:0 auto;
+    label{
+        color:$mainColor;
+        font-size:12px;
+        text-align:left;
+    }
+    p{
+        text-align:center;
+        color:$fontGrayColor;
+    }
+}
+
+@mixin contact-input-style($backgroundColor){
+    border-radius:50px;
+    width:100%;
+    border:none;
+    padding:0 15px;
+    height: 2.5em;
+    background-color:$backgroundColor;
+    &:focus {
+  outline: none;
+}
+}
+.contact-input-form{
+    @include contact-input-style($backgroundGrayColor);
+      &::placeholder{
+        color: $mainColor;
+      }
+    }
+
+.contact-input-textarea{
+    border-radius:10px;
+    width:100%;
+    border:none;
+    padding:0 15px;
+    height: 8.5em;
+    background-color: $backgroundGrayColor;
+    &:focus {
+    outline: none;
+    }
+    &::placeholder{
+    color: $mainColor;
+    }
+}

@@ -8,6 +8,19 @@
     margin:20px 0;
 }
 
+.register-form{
+    margin:0 auto;
+    label{
+        color:$mainColor;
+        font-size:12px;
+        text-align:left;
+    }
+    p{
+        text-align:center;
+        color:$fontGrayColor;
+    }
+}
+
 .login_form{
     text-align:center;
     margin:0 auto;
@@ -27,20 +40,7 @@
     margin:5px 0;
 }
 
-.register-form{
-    margin:0 auto;
-    label{
-        color:$mainColor;
-        font-size:12px;
-        text-align:left;
-    }
-    p{
-        text-align:center;
-        color:$fontGrayColor;
-    }
-}
-
-@mixin input-style($backgroundColor){
+@mixin user-input-style($backgroundColor){
     border-radius:50px;
     width:100%;
     border:none;
@@ -53,20 +53,15 @@
 }
 
 .register-input-form{
-@include input-style($backgroundGrayColor);
-  &::placeholder{
-    color: $mainColor;
-  }
+    @include user-input-style($backgroundGrayColor);
+      &::placeholder{
+        color: $mainColor;
+    }
 }
 
 .login-input-form{
-    @include input-style($backgroundGrayColor);
+    @include user-input-style($backgroundGrayColor);
       &::placeholder{
         color: $mainColor;
       }
     }
-.submit-button{
-  @include input-style($mainColor);
-  color: $whiteColor;
-  cursor: pointer;
-}
