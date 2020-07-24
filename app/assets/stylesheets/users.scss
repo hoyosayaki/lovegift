@@ -1,0 +1,72 @@
+@import "./variables";
+
+.actions{
+    margin:30px 0;
+}
+
+.login-field{
+    margin:20px 0;
+}
+
+.login_form{
+    text-align:center;
+    margin:0 auto;
+    p{
+        color:$fontGrayColor;
+    }
+}
+
+.register-page-title{
+    text-align:center;
+    color: $mainColor;
+    margin:5px 0;
+}
+.login-page-title{
+    text-align:center;
+    color: $mainColor;
+    margin:5px 0;
+}
+
+.register-form{
+    margin:0 auto;
+    label{
+        color:$mainColor;
+        font-size:12px;
+        text-align:left;
+    }
+    p{
+        text-align:center;
+        color:$fontGrayColor;
+    }
+}
+
+@mixin input-style($backgroundColor){
+    border-radius:50px;
+    width:100%;
+    border:none;
+    padding:0 15px;
+    height: 2.5em;
+    background-color:$backgroundColor;
+    &:focus {
+  outline: none;
+}
+}
+
+.register-input-form{
+@include input-style($backgroundGrayColor);
+  &::placeholder{
+    color: $mainColor;
+  }
+}
+
+.login-input-form{
+    @include input-style($backgroundGrayColor);
+      &::placeholder{
+        color: $mainColor;
+      }
+    }
+.submit-button{
+  @include input-style($mainColor);
+  color: $whiteColor;
+  cursor: pointer;
+}
