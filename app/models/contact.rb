@@ -1,3 +1,3 @@
 class Contact < ApplicationRecord
-  belongs_to :id
+  belongs_to :user
 end
