@@ -1,0 +1,10 @@
+nav.navbar.navbar-expand.sticky-top[style="background-color: $mainColor;"]
+  .container
+    a.navbar-brand[href="#"]
+    button.navbar-toggler[type="button" data-toggle="collapse" data-target="#navbar" aria-controls="navbar" aria-expanded="false" aria-label="ナビゲーションの切替"]
+      span.navbar-toggler-icon
+    #navbar.collapse.navbar-collapse
+      .navbar-nav.mr-auto
+        - if user_signed_in?
+          = link_to 'ログアウト', destroy_user_session_path, method: :delete , class: "nav-link"
+        - else

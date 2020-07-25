@@ -1,24 +1,31 @@
-.top-header
-p.logo LOVEGIFT
-p ログイン
-p 新規登録
+.top
+  .top-image
+    = image_tag 'mintblue_main.JPG', class: 'top-main-image'
+  .upper.col-8.offset-2
+    .top-contents
+      p.main-message
+        span
+          | LOVEGIFT 
+        | は、”おめでとう” と ”ありがとう” を記録するサービスです。
+  
+      / p.main-message こんな時に
+  
+      .image-message
+        = image_tag 'mintblue_1.JPG', class: 'child-images'
+        .message1 大切な人の誕生日をお祝いしたいから、<br>リマインドをしてほしい
+  
+      .image-message
+        = image_tag 'mintblue_2.JPG', class: 'child-image-tate'
+        .message2 喜んでもらいたいから、<br>好きなものをちゃんとおぼえていたい
+  
+      .image-message
+        = image_tag 'mintblue_3.JPG', class: 'child-images'
+        .message3 お祝いしてもらった嬉しい気持ちを<br>ギフトと一緒に残しておきたい。
 
-= image_tag 'top_kasumisou.JPG', class: 'top-image'
 
-p LOVEGIFTは、”おめでとう”と”ありがとう”を記録するサービスです。
-
-
-p こんな時に。
-
-p もうすぐ母の日だけど、去年は何を贈ったっけ？
-p おじいちゃんが米寿のお祝いの年って今年だったっけ？
-p お祝いしてもらった嬉しい気持ちをギフトと一緒に残しておきたい。
-
-
-
-.top-footer
-li 運営者
-li 利用規約
-li プライバシーポリシー
-li お問い合わせ
-li ログイン＆新規登録
+  .top-footer
+    li 運営者
+    li 利用規約
+    li プライバシーポリシー
+    li お問い合わせ
+    li ログイン＆新規登録
