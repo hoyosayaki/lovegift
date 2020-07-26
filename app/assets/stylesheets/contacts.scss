@@ -54,3 +54,21 @@
     color: $mainColor;
     }
 }
+
+
+.contact-index-page-title{
+    text-align:center;
+    color: $mainColor;
+    margin-bottom:25px;
+}
+.contacts-index{
+    margin-bottom: 10px;
+}
+.profile-image{
+    width: 100px;
+    height: 100px;
+    object-fit: cover;
+    // object-position:50% 20%;
+    border-radius: 100px;
+    // opacity: 0.6;
+}

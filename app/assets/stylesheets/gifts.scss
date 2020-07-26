@@ -1,3 +1,60 @@
 // Place all the styles related to the gifts controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: https://sass-lang.com/
+
+// Place all the styles related to the Contacts controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: https://sass-lang.com/
+
+@import "./variables";
+
+.gift-register-page-title{
+    text-align:center;
+    color: $mainColor;
+    margin:5px 0;
+}
+.gift-register-form{
+    margin:0 auto;
+    label{
+        color:$mainColor;
+        font-size:12px;
+        text-align:left;
+    }
+    p{
+        text-align:center;
+        color:$fontGrayColor;
+    }
+}
+
+@mixin gift-input-style($backgroundColor){
+    border-radius:50px;
+    width:100%;
+    border:none;
+    padding:0 15px;
+    height: 2.5em;
+    background-color:$backgroundColor;
+    &:focus {
+  outline: none;
+}
+}
+.gift-input-form{
+    @include gift-input-style($backgroundGrayColor);
+      &::placeholder{
+        color: $mainColor;
+      }
+    }
+
+.gift-input-textarea{
+    border-radius:10px;
+    width:100%;
+    border:none;
+    padding:0 15px;
+    height: 8.5em;
+    background-color: $backgroundGrayColor;
+    &:focus {
+    outline: none;
+    }
+    &::placeholder{
+    color: $mainColor;
+    }
+}

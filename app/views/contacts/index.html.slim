@@ -1,0 +1,20 @@
+h1.contact-index-page-title
+  |  お知り合い一覧
+.contacts-index.d-flex.justify-content-center
+  .profile.col-11.col-md-7
+    .row
+      .col-4
+        =image_tag 'profile_man.jpg', class: 'profile-image'
+      .col-5
+        .name 満島　真之介
+      .col-2.bg-info
+        = link_to "編", new_user_session_path , class: "btn"
+.contacts-index.d-flex.justify-content-center
+  .profile.col-11.col-md-7
+    .row
+      .col-4
+        =image_tag 'profile_woman.jpg', class: 'profile-image'
+      .col-5
+        .name 満島　ひかり
+      .col-2.bg-info
+        = link_to "編", new_user_session_path , class: "btn"

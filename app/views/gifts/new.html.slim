@@ -1,0 +1,23 @@
+h1.gift-register-page-title
+  |  ギフトの登録
+.gift-register-form.col-11.col-md-7
+  = form_with model:@gift do |f|
+    div
+      = f.label :event_name,"イベント", class:"label"
+      br
+      = f.text_field :event_name, autofocus: true, placeholder:"お誕生日", class:"gift-input-form"
+    div
+      = f.label :event_date,"日付", class:"label"
+      br
+      = f.date_field :event_date, class:"gift-input-form", value: Time.now.strftime("%Y-%m-%d")
+    div
+      = f.label :cost, "金額", class:"label"
+      br
+      = f.text_field :cost, placeholder:"1000円くらい", class:"gift-input-form"
+    div
+      = f.label :memo,"メモ", class:"label"
+      br
+      = f.text_area :memo, placeholder:"お姉ちゃんと一緒に選んで贈った。とっても喜んでくれた！" , class:"gift-input-textarea"
+    .actions.mt-5
+      = f.submit "登録する", class:"submit-button"
+      = link_to "キャンセル", new_user_session_path , class:"btn submit-button"
