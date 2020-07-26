@@ -90,3 +90,8 @@ h2 {
     cursor: pointer;
   }
 
+.login-button{
+    @include input-style($mainColor);
+    color: $whiteColor;
+    cursor: pointer;
+  }
