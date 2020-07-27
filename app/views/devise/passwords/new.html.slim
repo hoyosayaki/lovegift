@@ -1,11 +1,11 @@
-h2
-  | Forgot your password?
-= form_for(resource, as: resource_name, url: password_path(resource_name), html: { method: :post }) do |f|
-  = render "devise/shared/error_messages", resource: resource
-  .field
-    = f.label :email
-    br
-    = f.email_field :email, autofocus: true, autocomplete: "email"
-  .actions
-    = f.submit "Send me reset password instructions"
-= render "devise/shared/links"
+h2.reset-pw-page-title
+  | パスワード再設定
+.reset-info.col-11.col-md-7.col-lg-4
+  p パスワード再設定用のURLをお送りするので<br>ご登録のメールアドレスをご入力ください。
+.col-11.col-md-7.login_form
+  = form_for(resource, as: resource_name, url: password_path(resource_name), html: { method: :post }) do |f|
+    = render "devise/shared/error_messages", resource: resource
+    .reset-pw-field
+      = f.email_field :email, autofocus: true, autocomplete: "email", placeholder:"メールアドレス", class: "login-input-form"
+      = f.submit "再設定メール送信", class:"reset-pw-button"
+      = render "devise/shared/links"

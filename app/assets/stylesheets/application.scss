@@ -23,8 +23,7 @@ body {
   padding:0;
 }
 
-//font-size
-
+// font-size
 html{
   font-size: 62.5%;
 }
@@ -45,7 +44,7 @@ h2 {
 
 @media (min-width: 1200px) {/* 1200px以上*/
   h1 {
-      font-size: 3.6rem;/* 36px*/
+      font-size: 3.2rem;/* 32px*/
   }
   h2 {
       font-size: 2.4rem;/* 24px*/
@@ -67,11 +66,27 @@ h2 {
   p {
     font-size: 1.2rem;/* 12px*/
   }
+  .header{
+    display: none;
+  }
+}
+
+//ナビゲーション
+@media screen and (max-width: 640px) {
+  .header{
+    display: none;
+  }
+}
+@media screen and (min-width: 640px) {
+  .mobile_header{
+    display: none;
+  }
 }
 
 .wrapper{ //width 400px以下の時に余白ができてしまうため
     overflow: hidden;
 }
+
 
 @mixin input-style($backgroundColor){
     border-radius:50px;
@@ -91,8 +106,4 @@ h2 {
     cursor: pointer;
   }
 
-.login-button{
-    @include input-style($mainColor);
-    color: $whiteColor;
-    cursor: pointer;
-  }
+
