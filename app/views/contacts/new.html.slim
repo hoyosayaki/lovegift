@@ -1,6 +1,7 @@
 h1.contact-register-page-title
   |  知り合い情報登録
 .contact-register-form.col-11.col-md-7
+  =image_tag 'profile_man.jpg', class: 'profile-image'
   = form_with model:@contact do |f|
     div
       = f.label :name,"名前", class:"label"

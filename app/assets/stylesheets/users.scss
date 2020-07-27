@@ -32,12 +32,12 @@
 .register-page-title{
     text-align:center;
     color: $mainColor;
-    margin:5px 0;
+    margin:40px 0 5px 0;
 }
 .login-page-title{
     text-align:center;
     color: $mainColor;
-    margin:5px 0;
+    margin:40px 0 5px 0;
 }
 
 @mixin user-input-style($backgroundColor){

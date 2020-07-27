@@ -1,22 +1,56 @@
-h1.contact-index-page-title
-  |  ギフト一覧
-.row
-  .d-flex.justify-content-center
-    .col-10.col-md-3
-      .card
-        =image_tag 'mintblue_2.JPG', class: 'gift-image card-img-top'
-        .card-body
-          .card-title 誕生日
-          .card-text いついつだれだれ云々かんぬん
-    .col-10.col-md-3
-      .card
-        =image_tag 'mintblue_2.JPG', class: 'gift-image card-img-top'
-        .card-body
-          .card-title 誕生日
-          .card-text いついつだれだれ云々かんぬん
-    .col-10.col-md-3
-      .card
-        =image_tag 'mintblue_2.JPG', class: 'gift-image card-img-top'
-        .card-body
-          .card-title 誕生日
-          .card-text いついつだれだれ云々かんぬん
+.tabs
+  input#all checked="checked" name="tab_item" type="radio" /
+  label.tab_item for="all"  すべて
+  input#programming name="tab_item" type="radio" /
+  label.tab_item for="programming"  いただきもの
+  input#design name="tab_item" type="radio" /
+  label.tab_item for="design"　贈りもの
+  #all_content.tab_content
+    .tab_content_description
+      p.c-txtsp 総合の内容がここに入ります
+      .row
+        .d-flex.justify-content-center
+          .col-10.col-md-3
+            .card
+              =image_tag 'giftbox_2.jpg', class: 'gift-image card-img-top'
+              .card-body
+                .card-title 誕生日
+                .card-text いついつだれだれ云々かんぬん
+          .col-10.col-md-3
+            .card
+              =image_tag 'giftbox_1.jpg', class: 'gift-image card-img-top'
+              .card-body
+                .card-title 誕生日
+                .card-text いついつだれだれ云々かんぬん
+          .col-10.col-md-3
+            .card
+              =image_tag 'giftbox_2.jpg', class: 'gift-image card-img-top'
+              .card-body
+                .card-title 誕生日
+                .card-text いついつだれだれ云々かんぬん
+  #programming_content.tab_content
+    .tab_content_description
+      p.c-txtsp プログラミングの内容がここに入ります
+      .row
+        .d-flex.justify-content-center
+          .col-10.col-md-3
+            .card
+              =image_tag 'mintblue_2.JPG', class: 'gift-image card-img-top'
+              .card-body
+                .card-title 誕生日
+                .card-text いついつだれだれ云々かんぬん
+          .col-10.col-md-3
+            .card
+              =image_tag 'mintblue_2.JPG', class: 'gift-image card-img-top'
+              .card-body
+                .card-title 誕生日
+                .card-text いついつだれだれ云々かんぬん
+          .col-10.col-md-3
+            .card
+              =image_tag 'mintblue_2.JPG', class: 'gift-image card-img-top'
+              .card-body
+                .card-title 誕生日
+                .card-text いついつだれだれ云々かんぬん
+  #design_content.tab_content
+    .tab_content_description
+      p.c-txtsp デザインの内容がここに入ります

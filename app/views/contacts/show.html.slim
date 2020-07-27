@@ -1,10 +1,49 @@
-h1.contact-index-page-title
-  |  お知り合い一覧
-.contacts-index.d-flex.justify-content-center
-  .profile.col-11.col-md-7
-    .row
-      .col-4
-        =image_tag 'profile_man.jpg', class: 'profile-image'
-      .col-7
-        .name 満島　真之介
-    .birthday
+.tabs
+  input#all checked="checked" name="tab_item" type="radio" /
+  label.tab_item for="all"  お付き合い情報
+  input#programming name="tab_item" type="radio" /
+  label.tab_item for="programming"  ギフトの履歴
+  input#design name="tab_item" type="radio" /
+  label.tab_item for="design"
+  #all_content.tab_content
+    .tab_content_description
+      p.c-txtsp 総合の内容がここに入ります
+    .contacts-index.d-flex.justify-content-center
+      .profile.col-11.col-md-7
+        .row
+          .col-4
+            =image_tag 'profile_man.jpg', class: 'profile-image'
+          .col-7
+            .name 満島　真之介
+            .birthday 1989/7/17
+            .birthday 辛いもの
+            .birthday 甘いもの
+            .birthday お酒は控えてるって言ってた
+
+  #programming_content.tab_content
+    .tab_content_description
+      p.c-txtsp プログラミングの内容がここに入ります
+      .row
+        .d-flex.justify-content-center
+          .col-10.col-md-3
+            .card
+              =image_tag 'mintblue_2.JPG', class: 'gift-image card-img-top'
+              .card-body
+                .card-title 誕生日
+                .card-text いついつだれだれ云々かんぬん
+          .col-10.col-md-3
+            .card
+              =image_tag 'mintblue_2.JPG', class: 'gift-image card-img-top'
+              .card-body
+                .card-title 誕生日
+                .card-text いついつだれだれ云々かんぬん
+          .col-10.col-md-3
+            .card
+              =image_tag 'mintblue_2.JPG', class: 'gift-image card-img-top'
+              .card-body
+                .card-title 誕生日
+                .card-text いついつだれだれ云々かんぬん
+  #design_content.tab_content
+    .tab_content_description
+      p.c-txtsp デザインの内容がここに入ります
+

@@ -7,7 +7,7 @@
 .contact-register-page-title{
     text-align:center;
     color: $mainColor;
-    margin:5px 0;
+    margin:40px 0 5px 0;
 }
 .contact-register-form{
     margin:0 auto;
@@ -59,16 +59,77 @@
 .contact-index-page-title{
     text-align:center;
     color: $mainColor;
-    margin-bottom:25px;
+    margin:40px 0 20px 0;
 }
 .contacts-index{
     margin-bottom: 10px;
+}
+.profile{
+    border:1px solid;
+    padding:5px 0;
 }
 .profile-image{
     width: 100px;
     height: 100px;
     object-fit: cover;
     // object-position:50% 20%;
-    border-radius: 100px;
+    border-radius: 10px;
     // opacity: 0.6;
 }
+
+
+
+/*タブ切り替え全体のスタイル*/
+.tabs {
+    margin-top: 350px;
+    padding-bottom: 40px;
+    background-color: #fff;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+    width: 80%;
+    margin: 0 auto;}
+
+  /*タブのスタイル*/
+  .tab_item {
+    width: calc(100%/3);
+    height: 50px;
+    border-bottom: 3px solid #5ab4bd;
+    background-color: #d9d9d9;
+    line-height: 50px;
+    font-size: 16px;
+    text-align: center;
+    color: #565656;
+    display: block;
+    float: left;
+    text-align: center;
+    font-weight: bold;
+    transition: all 0.2s ease;
+  }
+  .tab_item:hover {
+    opacity: 0.75;
+  }
+
+  /*ラジオボタンを全て消す*/
+  input[name="tab_item"] {
+    display: none;
+  }
+
+  /*タブ切り替えの中身のスタイル*/
+  .tab_content {
+    display: none;
+    padding: 40px 40px 0;
+    clear: both;
+    overflow: hidden;
+  }
+
+  /*選択されているタブのコンテンツのみを表示*/
+  #all:checked ~ #all_content,
+  #programming:checked ~ #programming_content,
+  #design:checked ~ #design_content {
+    display: block;
+  }
+
+  /*選択されているタブのスタイルを変える*/
+  .tabs input:checked + .tab_item {
+    background-color: #5ab4bd;
+    color: #fff;
+  }
