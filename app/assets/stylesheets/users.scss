@@ -136,3 +136,16 @@
             transition: background-color 1s;
           }
     }
+
+.comfirm-infomation{
+    border:1px solid $lightGrayColor;
+    border-radius: 12px;
+    margin:0 auto;
+    margin-bottom: 20px;
+    padding:5px 0;
+    p{
+        font-size: 1.2rem;
+        text-align:center;
+        color:$fontGrayColor;
+    }
+}

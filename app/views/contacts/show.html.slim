@@ -1,10 +1,10 @@
 .tabs
   input#all checked="checked" name="tab_item" type="radio" /
-  label.tab_item for="all"  お付き合い情報
+  label.tab_item for="all"  プロフィール
   input#programming name="tab_item" type="radio" /
   label.tab_item for="programming"  ギフトの履歴
   input#design name="tab_item" type="radio" /
-  label.tab_item for="design"
+  label.tab_item for="design" 最近のメモ
   #all_content.tab_content
     .tab_content_description
       p.c-txtsp 総合の内容がここに入ります
@@ -12,7 +12,7 @@
       .profile.col-11.col-md-7
         .row
           .col-4
-            =image_tag 'profile_man.jpg', class: 'profile-image'
+            =image_tag 'profile/profile_man.jpg', class: 'profile-image'
           .col-7
             .name 満島　真之介
             .birthday 1989/7/17
@@ -46,4 +46,7 @@
   #design_content.tab_content
     .tab_content_description
       p.c-txtsp デザインの内容がここに入ります
+      .col-10
+        .memo-contents
+          グータンのMCやってるって言ってた！
 

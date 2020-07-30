@@ -1,11 +1,19 @@
+= javascript_include_tag 'select_profile.js'
+
 h1.contact-register-page-title
   |  プロフィール登録
 .contact-register-form.col-11.col-md-7
   = form_with model:@contact do |f|
     .row
-      .col-4
-        =image_tag 'profile_man.jpg', class: 'profile-image'
-      .col-8
+      .col-11.col-sm-5.col-lg-4
+        a data-target="#testModal" data-toggle="modal" 
+          img.profile-image#pr src="/assets/profile/profile_man.jpg" /
+
+          <form action="" method="post" name="formSample">
+            <input type="text" id="textSample" name="textSample" value="">
+          </form>
+      .col-11.col-sm-7.col-lg-8
+        .d-flex.align-items-center
         div
           = f.label :name,"名前", class:"label"
           br
@@ -14,6 +22,8 @@ h1.contact-register-page-title
           = f.label :birthday,"誕生日", class:"label"
           br
           = f.date_select :birthday, {use_month_numbers: true, default: Date.new(1990, 1, 1)}, class: "form-control"
+        div
+          button.btn.btn-primary.mb-12 data-target="#ageToBirth" data-toggle="modal" type="button"  生まれ年？
     div
       = f.label :like,"好きなもの", class:"label"
       br
@@ -26,5 +36,43 @@ h1.contact-register-page-title
       = f.label :memo,"メモ", class:"label"
       br
       = f.text_area :memo, placeholder:"前にお花をとても喜んでくれた" , class:"contact-input-textarea"
-    .actions.mt-5
-      = f.submit "登録する",class:"submit-button"
+    .actions
+      = f.submit "登録する",class:"contact-register-button"
+
+
+
+#testModal.modal.fade aria-hidden="true" aria-labelledby="basicModal" role="dialog" tabindex="-1"
+  .modal-dialog
+    .modal-content
+      .modal-header
+        h4 class="modal-title" id="myModalLabel" プロフィール画像選択
+      .modal-body
+        .selection-group
+          .row
+            .col-3
+              input#image_1 name="check_image" type="radio" value="1" /
+              label for="image_1" 
+                =image_tag 'profile/profile_1.jpg', class: 'select-profile-image'
+            .col-3
+              input#image_2 name="check_image" type="radio" value="2" /
+              label for="image_2" 
+                =image_tag 'profile/profile_2.jpg', class: 'select-profile-image'
+            .col-3
+              input#image_3 name="check_image" type="radio" value="3" /
+              label for="image_3" 
+                =image_tag 'profile/profile_3.jpg', class: 'select-profile-image'
+      .modal-footer
+        button.btn.btn-default data-dismiss="modal" type="button"  キャンセル
+        button.btn.btn-danger#btn1 type="button"  決定
+
+
+#ageToBirth.modal.fade aria-hidden="true" aria-labelledby="basicModal" role="dialog" tabindex="-1"
+  .modal-dialog
+    .modal-content
+      .modal-header
+        h4 class="modal-title" id="myModalLabel" 生まれ年を計算
+      .modal-body
+        .div 誕生日と年齢から生まれ年を計算します。　誕生日　年齢　→　1989年生まれ　昭和→1976年
+      .modal-footer
+        button.btn.btn-default data-dismiss="modal" type="button"  キャンセル
+        button.btn.btn-danger type="button"  決定

@@ -15,7 +15,39 @@ h1.register-page-title
       br
       = f.password_field :password_confirmation, placeholder:"abcd1234", class:"register-input-form"
     .actions
-      = f.submit "登録する", class:"register-button"
+      = f.submit "同意して登録する", class:"register-button"
+  .comfirm-infomation.col-11.col-sm-8
+    p
+      i.fas.fa-info-circle
+      a[data-toggle="modal" data-target="#userPolicy"]
+        |  利用規約 
+      | 及び 
+      a[data-toggle="modal" data-target="#personalInfo"]
+        | 個人情報の取り扱い 
+      | について同意いただいた上、ボタンを押してください。
   div
     p
       = render "devise/shared/links"
+
+
+#userPolicy.modal.fade aria-hidden="true" aria-labelledby="basicModal" role="dialog" tabindex="-1"
+  .modal-dialog
+    .modal-content
+      .modal-header
+        h4 class="modal-title" id="myModalLabel" 利用規約
+      .modal-body
+
+      .modal-footer
+        button.btn.btn-default data-dismiss="modal" type="button"  閉じる
+        button.btn.btn-danger type="button"  削除
+
+#personalInfo.modal.fade aria-hidden="true" aria-labelledby="basicModal" role="dialog" tabindex="-1"
+  .modal-dialog
+    .modal-content
+      .modal-header
+        h4 class="modal-title" id="myModalLabel" 個人情報の取り扱い
+      .modal-body
+
+      .modal-footer
+        button.btn.btn-default data-dismiss="modal" type="button"  閉じる
+        button.btn.btn-danger type="button"  削除
