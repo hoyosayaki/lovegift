@@ -72,7 +72,19 @@ h1.contact-register-page-title
       .modal-header
         h4 class="modal-title" id="myModalLabel" 生まれ年を計算
       .modal-body
-        .div 誕生日と年齢から生まれ年を計算します。　誕生日　年齢　→　1989年生まれ　昭和→1976年
+        .div
+        select
+          option value="select"  選択してください
+          option value="a01"  西暦変換
+          option value="a02"  生まれ年計算
+        .div
+
+        section#a01
+          | 要素１
+        section#a02
+          | 要素2
+        .div
+        p 年
       .modal-footer
         button.btn.btn-default data-dismiss="modal" type="button"  キャンセル
         button.btn.btn-danger type="button"  決定

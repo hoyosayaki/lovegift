@@ -8,4 +8,15 @@ $(document).on('turbolinks:load', function() {
         $('#textSample').val(str1);
         $('#testModal').modal('hide');
     });
-  });
+
+    $('select').change(function () {
+        var val = $('select option:selected').val();
+        console.log(1);
+        if (val == 'select') return;
+        console.log(2);
+        $('section').fadeOut();
+        console.log(3);
+        $('section#' + val ).fadeIn();
+        console.log(4);
+      });
+});
